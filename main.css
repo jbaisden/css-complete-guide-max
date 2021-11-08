@@ -38,5 +38,5 @@ body {
 }
 
 .main-nav__item {
-
+    display:inline-block;
 }
