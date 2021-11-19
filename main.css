@@ -68,9 +68,9 @@ body {
     padding: 3px 0;
 }
 
-.main-nav__item a::after  {
+.main-nav__item a::after {
     content:"( ! )";
-    color:red;
+    color:green;
 }
 
 .main-nav__item a:hover,
