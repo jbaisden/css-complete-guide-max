@@ -1,18 +1,20 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 .main-header {
-  position: fixed;
-  background: #2ddf5c;
-  padding: 8px 16px;
-  width: 100%;
-  margin-bottom: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #2ddf5c;
+    padding: 8px 16px;
+    z-index: 1;
 }
 
 /* This is a child combinator...it says apply .main-header to the first div child
@@ -54,34 +56,24 @@ body {
   padding: 3px 0;
 }
 
-.main-nav__item a::after {
-  // content:"( ! )";
-  color: green;
-}
-
 .main-nav__item a:hover,
 .main-nav__item a:active {
   color: white;
   border-bottom: 5px solid white;
 }
 
-// p::first-letter {
-//   color: red;
-//   font-size: 20;
-// }
-
 .main-nav__item--cta a {
-  color: white;
-  background: red;
-  padding: 8px 16px;
-  border-radius: 8px;
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active {
-  color: red;
-  background: white;
-  border: none;
+    color: #ff1b68;
+    background: white;
+    border: none;
 }
 
 .main-footer {
@@ -113,20 +105,20 @@ body {
 }
 
 .button {
-  font: inherit;
-  background: #034f1f;
-  color: white;
-  border-radius: 8px;
-  padding: 8px;
-  border: 1px solid #034f1f;
-  font-weight: bold;
-  cursor: pointer;
+    background: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .button:hover,
 .button:active {
-  background: white;
-  color: #034f1f;
+    background: white;
+    color: #0e4f1f;
 }
 
 .button:focus {

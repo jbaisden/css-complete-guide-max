@@ -5,7 +5,16 @@
 -------------------------------------------------
 -------------------------------------------------
 -------------------------------------------------
+position: relative/absolute only define a stacking context once you supply a value
+for z-index.
 -------------------------------------------------
+Question 3:
+Adding the position  property with a value different from static  to a parent element will change the child's...
+...positioning context if the child has a position value of absolute.
+
+What you should review
+Adding the position  property with a value different from static  to a parent element will change the child's...
+Lecture 88 Styling & Positioning our Badge with "absolute" and "relative"
 -------------------------------------------------
 Section 87 time 7:59
 Research nuances of Position: absolute and position: relative.
