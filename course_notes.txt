@@ -1,0 +1,129 @@
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+Section 87 time 7:59
+Research nuances of Position: absolute and position: relative.
+
+Position: Relative applies positioning to an element's last ancestor that contains a position attribute. 
+In this example, applying position: relative to the package class means package__badge's position: relative attribute 
+applies to the parent element with the package class instead of the html document, which is the default.
+-------------------------------------------------
+Adding a z-index to elements that have no position property applied has no effect.
+
+z-index: auto generally means a z-index value of 0.
+-------------------------------------------------
+Applying position:fixed seems like it takes content out of the current flow. If content was written on paper, 
+this seems akin to moving the fixed content to a new sheet of paper, making the rest of that sheet transparent, 
+and then putting it on top of the other pages. The net effect is that non-fixed content on the page is moved up 
+and then given the appearance that's it's hidden or clipped by the fixed content.
+
+That's probably stupidly over complicating the situation, but it's what it's like to me.
+-------------------------------------------------
+If the html or parent element of the position:fixed element/content has a margin, top:0px; left:0px; 
+will be needed to overwrite the margining to give the appearance that the element is fixed to the 
+top most and left most positions.
+-------------------------------------------------
+Position property applies to both block and inline elements equally (divs and spans).
+-------------------------------------------------
+look into box-sizing: border-box; I'm not 100% on what this does, but it fixed an issue 
+with the right border on the nav bar not showing when it was applied.
+-------------------------------------------------
+See image at this timestamp Section 82 time: 2:59
+-------------------------------------------------
+viewport: visible part/area of your web page. You could translate it with "your browser window".
+-------------------------------------------------
+id selectors have a higher specifity than class selectors.
+-------------------------------------------------
+The intent of the "float" attribute is to allow text to float around images; 
+however, using it for layout becomes highly problematic and is not recommended, 
+though, it used to be a common practice.
+-------------------------------------------------
+Still unclear on when it's best to style by targeting a class or an id. I'm guessing target via classes if 
+there's a chance for reuse and target by id if that particular element requires special styling for that instance.
+
+After watching a bit more, this is exactly how this should work. It's how we gave each section with 
+a class of "package" distinct backgrounds...by assigning id's to each section.
+-------------------------------------------------
+To create a circle, height and width must be set to the same value and a border-radius of 50% used. 
+You can turn a div into a circle by doing this and adding a border.
+-------------------------------------------------
+Setting margin: auto; will have the effect of centering content horizontally, but not vertically.
+-------------------------------------------------
+You can put a div in a LI?
+-------------------------------------------------
+use font: inherit; to override browser defaults so that styles inherited by an element dictate the styling. 
+I'm confused as to why we had to do this for the button but not the LI elements.
+-------------------------------------------------
+To create a combinator for psuedo classes, the declarations must be comma separated like so:
+
+.button:hover, .button:active{
+    background: white;
+    color: #034f1f;
+}
+-------------------------------------------------
+.plan--highlighted .plan__price {
+    color: whitesmoke;
+}
+ 
+This means apply the second class only to elements that have the first class. I think this is called a class combinator.
+-------------------------------------------------
+See this article on the nuances of display:inline-block;   https://css-tricks.com/when-do-you-use-inline-block/
+-------------------------------------------------
+rgba function takes a 4th parameter whose value defines the transparency of the color with 0 being fully transparent 
+and 1 being opaque.
+-------------------------------------------------
+See canIUse.com to check css features against browser compatibility.
+-------------------------------------------------
+Example: "a:not(.active) {...} would select all anchor tags that do not have the .active class and apply the style enclosed.
+-------------------------------------------------
+Favor styling via classes over id's. If a style targets an html tag, it should apply universally.
+-------------------------------------------------
+!important overrides specifity and all other selectors. Generally frowned upon.
+-------------------------------------------------
+See GoalKicker.com for various PDF's with notes on varied subjects
+http://spot.pcc.edu/~mbudiman/class-materials/lecture-notes/css-tutorial.pdf  pretty elementary tutorial on css, but 
+has the basic stuff that should probably be memorized.
+-------------------------------------------------
+See MDN for a list of Psuedo-classes (use :) and Psuedo-elements (use ::).
+
+Example of Psuedo class is hover, active
+
+Example of Psuedo element is after, first-letter
+
+-------------------------------------------------
+Setting "text-decoration: none;" on the LI item with hopes that it will 
+apply to the nested anchor tag will not work because browser defaults 
+apply to the elements themselves so this would get overridden by the browser.
+-------------------------------------------------
+A "gotcha" of display:inline-block is that it can treat the actual 
+carriage return between the div and nav elements in the IDE as a 
+character so subtracting the padding value alone may not be enough 
+to get things on the same line.
+-------------------------------------------------
+display:Inline  means things are organized in a line and don't take up the full width like block elements.
+-------------------------------------------------
+see box-sizing:border-box  vs  box-sizing:content-box; (default)
+-------------------------------------------------
+The universal css element: * {   }  ... this overrides inheritance and browser defaults.
+-------------------------------------------------
+Block Level elements will extend to the full width/height of their container.
+-------------------------------------------------
+Body has a default margin
+-------------------------------------------------
+Margin collapsing describes 2 margins overlapping when block elements are stacked. 
+The bigger margin takes precedence.
+-------------------------------------------------
+Because of margin-collapsing, it's good practice to either use margin-top OR margin-bottom.
+-------------------------------------------------
+Box model has 3 layers that surround the content. The inner most layer is padding then border then margin.
+-------------------------------------------------
+
+-------------------------------------------------
+
+-------------------------------------------------
